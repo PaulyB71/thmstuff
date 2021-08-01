@@ -59,10 +59,6 @@ while True:
     try:
         ssh.connect(RHOST, username=USER, password=OTP)
         print(f"Success with: {OTP}\n")
-        #OTP = bytes(str(OTP), encoding='utf-8')
-        #RHOST = bytes(str(RHOST), encoding='utf-8')
-        #output = subprocess.getoutput(f'gnome-terminal -x bash -c "sshpass -p {OTP} ssh {USER}@{RHOST}"')
-        #exec(output)
         print(f"Execute this command: sshpass -p \'{OTP}\' ssh architect@{RHOST}\n\n You have 60 seconds or less to run this command.")
         sys.exit()
     except Exception as ex:
